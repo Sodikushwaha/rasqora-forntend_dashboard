@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import {API_URL} from '../../data/ApiPath';
+// import {API_URL} from '../../data/ApiPath';
+import { API_URL } from "../../Data/ApiPath";
 
 export const Register = ({showLoginHandler}) => {
   const [username, setUsername] = useState("");

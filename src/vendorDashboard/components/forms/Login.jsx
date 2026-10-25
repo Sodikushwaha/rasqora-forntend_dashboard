@@ -1,7 +1,7 @@
 
 
 import { useState } from "react";
-import { API_URL } from "../../data/ApiPath";
+import { API_URL } from "../../Data/ApiPath";
 
 export const Login = ({ showWelcomeHandler }) => {
   const [email, setEmail] = useState("");

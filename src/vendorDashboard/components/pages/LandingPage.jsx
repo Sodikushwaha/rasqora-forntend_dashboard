@@ -8,6 +8,7 @@ import AddProduct from "../forms/AddProduct";
 import Welcome from "../Welcome";
 import AllProducts from "../AllProduct";
 
+
 function LandingPage() {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
