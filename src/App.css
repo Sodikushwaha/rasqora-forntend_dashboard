@@ -1,0 +1,410 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "carrois Gothic sc" , sans-serif ;
+}
+
+.navbarSection {
+  border: 1px solid gray;
+  height: 80px;
+  display: flex;
+  justify-content:space-between;
+  /* background-color: rgb(54, 52, 180); */
+  background-color: #F46036;
+  align-items: center;
+  color: white;
+  padding: 0 20px;
+  font-size: large;
+}
+
+.sidebarSection {
+ /* background-color:lightgray; */
+ background-color: #2E294E;
+ color: white;
+  width: 250px;
+  height: calc(100vh - 80px);
+ padding-top: 10px;
+
+}
+
+.sidebarSection ul li {
+  list-style: none;
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.collectionSection {
+  display: flex;
+}
+
+/* logout */
+.userAuth{
+  cursor: pointer;
+}
+
+/* Login section  */
+
+.loginSection {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.authForm{
+  width: 100%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.authForm input {
+  width: 100%;
+  max-width: 55%;
+  height: 1.4rem;
+
+}
+.authForm label{
+  width: 100%;
+  max-width: 55%;
+  font-weight: 400;
+}
+
+/* Register */
+.registerSection{
+   width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+}
+
+
+/* Add firm */
+
+
+.firmSection {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ /* border: 1px solid red; */
+}
+
+
+
+.tableForm{
+  width: 100%;
+  max-width: 50%;
+  margin-top: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-top: 2px;
+  -webkit-box-shadow:0px 4px 16px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow:0px 4px 16px 0px rgba(0,0,0,0.75);
+  box-shadow:0px 4px 16px 0px rgba(0,0,0,0.75);
+  border-radius:10px;
+}
+
+
+.tableForm input {
+  width: 100%;
+  max-width: 55%;
+  height: 35px;
+  max-width: 85%;
+  margin-bottom: 10px;
+}
+
+
+.tableForm label{
+  width: 100%;
+  max-width: 85%;
+  font-weight: 600;
+  color: gray;
+}
+
+/* check box inputs */
+.checkInp{
+  width: 100%;
+  max-width: 85%;
+  display: flex;
+}
+.checkInp label {
+  width: 20%;
+}
+
+.inputsContainer{
+  width: 100%;
+  max-width: 90%;
+    display: flex;
+}
+
+
+.checkboxContainer{
+width: 100%;
+max-width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.checkboxContainer label{
+width: 100%;
+font-size: small;
+}
+
+.checkboxContainer input{
+margin-left: -180px;
+}
+
+.regBoxContainer label {
+  font-size: small;
+}
+/* Product table */
+/* table.product {
+ 
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+
+table.product th,
+table.product td {
+  border: 1px solid gray;
+  width: 100vw;
+  padding: 10px;
+  text-align: center;
+}
+
+table.product th {
+  
+  background-color: #f2f2f2;
+}
+
+table.product img {
+  object-fit: cover;
+} */
+
+
+
+
+/* Product Table Container */
+table.product {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  font-family: Arial, sans-serif;
+}
+
+/* Table Header and Cells */
+table.product th,
+table.product td {
+  padding: 16px 18px;
+  text-align: center;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* Table Header */
+table.product th {
+  background-color: #fff4ed;
+  color: #d94f0b;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* Table Body */
+table.product td {
+  color: #444444;
+  background-color: #ffffff;
+}
+
+/* Row Hover Effect */
+table.product tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+table.product tbody tr:hover td {
+  background-color: #fffaf7;
+}
+
+/* Product Name */
+table.product td:first-child {
+  font-weight: 600;
+  color: #292929;
+  min-width: 150px;
+}
+
+/* Price */
+table.product td:nth-child(2) {
+  font-weight: 700;
+  color: #16803d;
+  white-space: nowrap;
+}
+
+/* Product Image */
+table.product img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #eeeeee;
+  display: block;
+  margin: auto;
+  transition: transform 0.2s ease;
+}
+
+table.product img:hover {
+  transform: scale(1.08);
+}
+
+/* Description */
+table.product td:nth-child(4) {
+  min-width: 180px;
+  max-width: 300px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* Delete Button */
+table.product td button {
+  background-color: #fff0f0;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 9px 16px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+table.product td button:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  box-shadow: 0 3px 8px rgba(220, 38, 38, 0.18);
+}
+
+table.product td button:active {
+  transform: scale(0.96);
+}
+
+/* Last Row Border */
+table.product tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Empty Products Message */
+.product-empty {
+  text-align: center;
+  padding: 35px 15px;
+  margin-top: 20px;
+  color: #777777;
+  background-color: #fafafa;
+  border: 1px dashed #dddddd;
+  border-radius: 10px;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  table.product {
+    min-width: 650px;
+    margin-top: 15px;
+  }
+
+  table.product th,
+  table.product td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  table.product img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+
+
+/* Not Found */
+.errorSection{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorSection h1 {
+  font-size: 4rem;
+}
+
+.authForm h3{
+  color: #D7263D;
+}
+
+.tableForm  h3{
+  color: #D7263D;
+}
+
+/* 
+.btnSubmit {
+  background-color: (43 , 43 , 180);
+  background-color: blue;
+  color:#dddddd;
+  border: 2px solid red;
+} */
+
+
+
+.btnSubmit {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btnSubmit button {
+  background-color: blue;
+  color: #dddddd;
+  border: 2px solid red;
+  padding: 10px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btnSubmit button:hover {
+  background-color: darkblue;
+  color: white;
+}
