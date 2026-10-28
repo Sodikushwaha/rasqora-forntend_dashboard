@@ -294,7 +294,7 @@ const AllProduct = () => {
                       src={
                         item.image.startsWith("http")
                           ? item.image
-                          : `${API_URL}/${item.image.replace(/^\/+/, "")}`
+                          : `${API_URL}/uploads/${item.image.replace(/^\/?(?:uploads\/)?/, "")}`
                       }
                       alt={item.productName || "Product"}
                       style={{
