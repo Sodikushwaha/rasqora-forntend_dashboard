@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import NavBar from "../NavBar";
 import SideBar from "../SideBar";
 import Login from "../forms/Login";
@@ -14,24 +14,16 @@ function LandingPage() {
   const [showRegister, setShowRegister] = useState(false);
   const [showFirm, setShowFirm] = useState(false);
   const [showProduct, setShowProduct] = useState(false);
-  const [showWelcome, setShowWelcome] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(
+    () => Boolean(localStorage.getItem("loginToken"))
+  );
   const [showAllProduct, setShowAllProduct] = useState(false);
-  const [showLogOut, setShowLogOut] = useState(false);
-  const [showFirmTitle, setShowFirmTitle] = useState(true);
-
-  useEffect(() => {
-    const loginToken = localStorage.getItem("loginToken");
-    if (loginToken) {
-      setShowLogOut(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    const firmName = localStorage.getItem("firmName");
-    if (firmName) {
-      setShowFirmTitle(false);
-    }
-  }, []);
+  const [showLogOut, setShowLogOut] = useState(
+    () => Boolean(localStorage.getItem("loginToken"))
+  );
+  const [showFirmTitle, setShowFirmTitle] = useState(
+    () => !localStorage.getItem("firmName")
+  );
 
   const showLogOutHandler = () => {
     confirm("Are you sure to logout ?");
@@ -41,6 +33,8 @@ function LandingPage() {
     localStorage.removeItem("firmName");
 
     setShowLogOut(false);
+    setShowWelcome(false);
+    setShowFirmTitle(true);
   };
 
   const showLoginHandler = () => {
@@ -110,6 +104,8 @@ const showProductHandler = () => {
 };
 
   const showWelcomeHandler = () => {
+    setShowLogOut(true);
+    setShowFirmTitle(!localStorage.getItem("firmName"));
     setShowProduct(false);
     setShowRegister(false);
     setShowFirm(false);
