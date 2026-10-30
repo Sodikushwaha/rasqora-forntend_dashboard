@@ -293,7 +293,7 @@ const AddFirm = () => {
         </div>
       </form>
 
-      {/* {firmId && (
+      {firmId && (
         <form className="tableForm" onSubmit={handleFirmImageUpdate}>
           <h3>Replace Firm Image</h3>
           <label htmlFor="replacement-firm-image">Choose a new image</label>
@@ -311,7 +311,7 @@ const AddFirm = () => {
             <button type="submit">Update Image</button>
           </div>
         </form>
-      )} */}
+      )}
     </div>
   );
 };
